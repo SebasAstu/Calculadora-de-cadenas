@@ -50,4 +50,9 @@ describe("Calculadora de una cadena", () => {
         const resultado = cd.calcularPara("//[;] 6;7;4");
         expect(resultado).toEqual(17);
       });
+
+    it("deberia generar la suma de numeros especificando delimitador de cualquier de caracteres en una cadena", () => {
+        const resultado = cd.calcularPara("//[***] 1***2***3”");
+        expect(resultado).toEqual(6);
+      });
   });
