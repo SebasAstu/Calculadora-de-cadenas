@@ -24,15 +24,15 @@ class CalculadoraCadena{
             }
             else
             {
-                res=Number.parseInt(cadena[0])+Number.parseInt(cadena[2]);
-                //for(var i = 0; i < cadena.length; i++)
-                //{
-                //    aux=cadena[i];
-                //    if(Number.isInteger(Number.parseInt(aux)))
-                //    {  
-                //        res=res +Number.parseInt(aux);
-                //    }
-                //}
+                //res=Number.parseInt(cadena[0])+Number.parseInt(cadena[2]);
+                for(var i = 0; i < cadena.length; i++)
+                {
+                    aux=cadena[i];
+                    if(Number.isInteger(Number.parseInt(aux)))
+                    {  
+                        res=res +Number.parseInt(aux);
+                    }
+                }
             }
         }
         return res;
