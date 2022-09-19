@@ -16,6 +16,7 @@ class CalculadoraCadena{
   //}
     calcularPara(cadena){
         let res=0,aux="";
+        var i=0;
         if(cadena!="")
         {
             if(cadena.length==1 && Number.isInteger(Number.parseInt(cadena)))
@@ -25,12 +26,21 @@ class CalculadoraCadena{
             else
             {
                 //res=Number.parseInt(cadena[0])+Number.parseInt(cadena[2]);
-                for(var i = 0; i < cadena.length; i++)
+                for(i; i < cadena.length; i++)
                 {
                     aux=cadena[i];
                     if(Number.isInteger(Number.parseInt(aux)))
                     {  
-                        res=res +Number.parseInt(aux);
+                        if(Number.isInteger(Number.parseInt(cadena[i+1])))
+                        {
+                            aux=aux+cadena[i+1];
+                            i=i+1;
+                        }
+                        else(Number.isNaN(Number.parseInt(cadena[i+1])))
+                        {
+                            res=res +Number.parseInt(aux);
+                        }
+                        
                     }
                 }
             }

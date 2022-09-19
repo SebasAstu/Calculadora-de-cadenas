@@ -25,4 +25,9 @@ describe("Calculadora de una cadena", () => {
         const resultado = cd.calcularPara("[1,2,3");
         expect(resultado).toEqual(6);
       });
+
+    it("deberia generar la suma de numeros de dos digitos en una cadena", () => {
+        const resultado = cd.calcularPara("[1,2,30");
+        expect(resultado).toEqual(33);
+      });
   });
