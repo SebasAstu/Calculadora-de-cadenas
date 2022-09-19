@@ -27,7 +27,12 @@ describe("Calculadora de una cadena", () => {
       });
 
     it("deberia generar la suma de numeros de dos digitos en una cadena", () => {
-        const resultado = cd.calcularPara("[1,2,30");
-        expect(resultado).toEqual(33);
+        const resultado = cd.calcularPara("[10,2,20");
+        expect(resultado).toEqual(32);
+      });
+
+    it("deberia generar la suma de numeros de 3 digitos en una cadena", () => {
+        const resultado = cd.calcularPara("[1,100,10");
+        expect(resultado).toEqual(111);
       });
   });

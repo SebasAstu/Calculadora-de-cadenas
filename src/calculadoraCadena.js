@@ -31,7 +31,11 @@ class CalculadoraCadena{
                     aux=cadena[i];
                     if(Number.isInteger(Number.parseInt(aux)))
                     {  
-                        if(Number.isInteger(Number.parseInt(cadena[i+1])))
+                        if(Number.isInteger(Number.parseInt(cadena[i+1])) && Number.isInteger(Number.parseInt(cadena[i+2]))){
+                            aux=aux+cadena[i+1]+cadena[i+2];
+                            i=i+2;      
+                        }
+                        if(Number.isInteger(Number.parseInt(cadena[i+1])) && Number.isNaN(Number.parseInt(cadena[i+2])))
                         {
                             aux=aux+cadena[i+1];
                             i=i+1;
