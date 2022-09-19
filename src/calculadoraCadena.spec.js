@@ -45,4 +45,9 @@ describe("Calculadora de una cadena", () => {
         const resultado = cd.calcularPara("[999,1-2000ç1000/1");
         expect(resultado).toEqual(1001);
       });
+
+    it("deberia generar la suma de numeros especificando delimitador de caracteres", () => {
+        const resultado = cd.calcularPara("//[;] 6;7;4");
+        expect(resultado).toEqual(17);
+      });
   });
