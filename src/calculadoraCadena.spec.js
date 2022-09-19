@@ -16,8 +16,8 @@ describe("Calculadora de una cadena", () => {
         expect(resultado).toEqual(1);
       });
 
-    //it("deberia generar sumar dos numeros ", () => {
-      //  const resultado = cd.calcularPara("1,2");
-      //  expect(resultado).toEqual(3);
-      //});
+    it("deberia generar la sumar dos numeros de una cadena", () => {
+        const resultado = cd.calcularPara("1,2");
+        expect(resultado).toEqual(3);
+      });
   });
