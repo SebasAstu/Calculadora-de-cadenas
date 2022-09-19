@@ -10,11 +10,11 @@ describe("Calculadora de una cadena", () => {
         expect(resultado).toEqual(0);
       });
 
-    //it("deberia generar el mismo numero 1 que no tiene regla", () => {
-    //    const resultado = cd.calcularPara("1");
+    it("deberia generar el mismo numero 1 que no tiene regla", () => {
+        const resultado = cd.calcularPara("1");
   
-    //    expect(resultado).toEqual(1);
-      //});
+        expect(resultado).toEqual(1);
+      });
 
     //it("deberia generar sumar dos numeros ", () => {
       //  const resultado = cd.calcularPara("1,2");
