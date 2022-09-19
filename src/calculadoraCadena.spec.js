@@ -40,4 +40,9 @@ describe("Calculadora de una cadena", () => {
         const resultado = cd.calcularPara("[999,1,2000,1000,1");
         expect(resultado).toEqual(1001);
       });
+    
+    it("deberia generar la suma de numeros usando diferentes caracteres", () => {
+        const resultado = cd.calcularPara("[999,1-2000ç1000/1");
+        expect(resultado).toEqual(1001);
+      });
   });
