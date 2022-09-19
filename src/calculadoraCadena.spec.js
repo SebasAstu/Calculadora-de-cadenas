@@ -51,8 +51,13 @@ describe("Calculadora de una cadena", () => {
         expect(resultado).toEqual(17);
       });
 
-    it("deberia generar la suma de numeros especificando delimitador de cualquier de caracteres en una cadena", () => {
+    it("deberia generar la suma de numeros especificando delimitador de cualquier longitud de caracteres en una cadena", () => {
         const resultado = cd.calcularPara("//[***] 1***2***3”");
         expect(resultado).toEqual(6);
+      });
+
+    it("deberia generar la suma de numeros especificando multiples delimitadores usando el formato //[delim1][delim2] en una cadena", () => {
+        const resultado = cd.calcularPara("//[*][%] 1*2%3,7-9");
+        expect(resultado).toEqual(22);
       });
   });
