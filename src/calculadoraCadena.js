@@ -42,7 +42,11 @@ class CalculadoraCadena{
                         }
                         else(Number.isNaN(Number.parseInt(cadena[i+1])))
                         {
-                            res=res +Number.parseInt(aux);
+                            if(Number,parseInt(aux)<1000)
+                            {
+                                res=res +Number.parseInt(aux);
+                            }
+                            
                         }
                         
                     }

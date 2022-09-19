@@ -22,8 +22,8 @@ describe("Calculadora de una cadena", () => {
       });
 
     it("deberia generar la sumaa de varios numeros de una cadena", () => {
-        const resultado = cd.calcularPara("[1,2,3");
-        expect(resultado).toEqual(6);
+        const resultado = cd.calcularPara("[1,2,3,5,1");
+        expect(resultado).toEqual(12);
       });
 
     it("deberia generar la suma de numeros de dos digitos en una cadena", () => {
@@ -32,7 +32,12 @@ describe("Calculadora de una cadena", () => {
       });
 
     it("deberia generar la suma de numeros de 3 digitos en una cadena", () => {
-        const resultado = cd.calcularPara("[1,100,10");
-        expect(resultado).toEqual(111);
+        const resultado = cd.calcularPara("[1,100,10,200");
+        expect(resultado).toEqual(311);
+      });
+
+    it("deberia generar la suma debe evitar numeros mayores a 1000 en una cadena", () => {
+        const resultado = cd.calcularPara("[999,1,2000,1000,1");
+        expect(resultado).toEqual(1001);
       });
   });
